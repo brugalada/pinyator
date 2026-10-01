@@ -11,6 +11,8 @@
 
 <table class='butons'>
 	<tr class='butons'>
+        <th class='butons'><a href="Event_Fitxa.php" class="boto" <?php EventLv2Not("hidden");?> ><?php echo _("Nou"); ?></a></th>
+		<th></th>
 		<th class='butons'>
 			<a href="Event.php?e=1" class="boto" >Actius</a>
 			<a href="Event.php?e=-1" class="boto" >Inactius</a>
