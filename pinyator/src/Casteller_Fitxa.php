@@ -134,12 +134,12 @@
 <form method="post" action="Casteller_Desa.php">
 	<div id="Dades" class="tabcontent" style="display:block">
 		<div class="form_group">
-			<label>ID</label>
-			<p><?php echo $id ?></p>
-			<input type="hidden" name="id" value="<?php echo $id ?>">
+			<label>ID - </label><?php echo "  <a href='Inscripcio.php?id=".$url."'>Link als seus esdeveniments</a>"?>
+			<input type="text" class="form_edit" name="id" value="<?php echo $id ?>" readonly>
+			<br><br>
 			<label>MalNom</label>
-			<p><?php echo $malnom ?></p>
-			<input type="hidden" name="malnom" value="<?php echo $malnom ?>">
+			<input type="text" class="form_edit" name="malnom" value="<?php echo $malnom ?>" autofocus required>
+			<br><br>
 			<table>
 				<tr>
 					<th>Lesió</th><th>Portar peu</th><th>Novell/a</th><th>Vacuna COVID</th>
@@ -173,26 +173,27 @@
 			</table>
 			<br>
 			<label>Nom</label>
-			<p><?php echo $nom ?></p>
-			<input type="hidden" name="nom" value="<?php echo $nom ?>">
-			<label>Cognoms</label>
-			<p><?php echo $cognom1 ?></p>
-			<input type="hidden" name="cognom1" value="<?php echo $cognom1 ?>">
-			<input type="hidden" name="cognom2" value="<?php echo $cognom2 ?>">
+			<input type="text" class="form_edit" name="nom" value="<?php echo $nom ?>" required>
+			<br><br>
+			<label>Cognom 1er</label>
+			<input type="text" class="form_edit" name="cognom1" value="<?php echo $cognom1 ?>" required>
+			<br><br>
+			<label>Cognom 2on</label>
+			<input type="text" class="form_edit" name="cognom2" value="<?php echo $cognom2 ?>">
+			<br><br>
 			<table style="width:100%;">
 				<tr>
 					<td style="padding-right:20px">
-						<label>Altura espatlles</label>
-						<p><?php echo $altura ?></p>
-			            <input type="hidden" name="altura" value="<?php echo $altura ?>">
+						<label>Alçada</label>
+						<input type="number" class="form_edit" name="altura" value="<?php echo $altura ?>">
 					</td>
 					<td>
-						<label>Altura mans</label>
-						<p><?php echo $alturaTroncs ?></p>
-			            <input type="hidden" name="altura" value="<?php echo $alturaTroncs ?>">
+						<label>Alçada troncs</label>
+						<input type="number" class="form_edit" name="alturaTroncs" value="<?php echo $alturaTroncs ?>">
 					</td>
 				</tr>
 			</table>
+			<br>
 			<table style="width:100%;">
 				<tr style="padding-top:20px">
 					<td style="padding-right:20px">
@@ -319,9 +320,11 @@
 			</select>
 			<br><br>
 			<label>Baixa</label>
-			<p><?php if ($estat == 2) echo "Sí"; else echo "No";?></p>
-			<input type="hidden" name="estat" value=<?php echo $estat ?>>
-			<br>
+			<label class="switch">texte
+			  <input type="checkbox" name="estat" value=2 <?php if ($estat == 2) echo " checked";?>>
+			  <span class="slider round"></span>
+			</label>
+			<br><br>
 			<button type="Submit" name= "Desa" value="desar" class="boto">Desa</button>
 			<button type="Submit" name= "Desa" value="desarievents" class="boto" style="float:right">Desa sense sortir</button>
 		</div>
