@@ -90,6 +90,7 @@ CREATE TABLE IF NOT EXISTS `CASTELL_POSICIO` (
   `Linkat` int(11) DEFAULT NULL,
   `Seguent` int(11) DEFAULT NULL,
   `Altura_Extra` int(11) DEFAULT NULL,
+  `Comentari` varchar(1000) DEFAULT NULL,
   PRIMARY KEY (`CASELLA_ID`,`Castell_ID`),
   KEY `CASTELL_POSICIO__CASTELL_ID` (`Castell_ID`)
 );
@@ -117,8 +118,8 @@ CREATE TABLE IF NOT EXISTS `CONFIGURACIO` (
   `FITES` int(11) NOT NULL DEFAULT '0',
   `DIFERENCIES` bit(1) DEFAULT b'0',
   `PERCENATGEASSISTENCIA` bit(1) NOT NULL DEFAULT b'0',
-  `APPEXTERNA` varchar(100),
-  `LOGOAPPEXTERNA` varchar(100)
+  `APPEXTERNA` varchar(100) NOT NULL,
+  `LOGOAPPEXTERNA` varchar(100) NOT NULL
 );
 
 --
@@ -143,7 +144,7 @@ CREATE TABLE IF NOT EXISTS `DOCUMENTACIO` (
   `LINK` varchar(400) NOT NULL,
   `ORDRE` int(11) NOT NULL,
   PRIMARY KEY (`DOCUMENTACIO_ID`)
-);
+)
 
 -- --------------------------------------------------------
 
@@ -157,6 +158,7 @@ CREATE TABLE IF NOT EXISTS `EVENT` (
   `Data` datetime NOT NULL,
   `Tipus` int(11) NOT NULL,
   `Estat` int(11) NOT NULL DEFAULT '1',
+  `Codi` varchar(50) NOT NULL,
   `EVENT_PARE_ID` int(11) NOT NULL DEFAULT '0',
   `ESPLANTILLA` bit(1) DEFAULT NULL,
   `CONTADOR` bit(1) DEFAULT b'0',
