@@ -148,10 +148,10 @@ if (!empty($_GET["e"]))
 	<table width=100%>
 		<tr>
 			<th>
-				<button type='button' class='butons' OnClick='Omple_Observacio_Dimarts()'>Dimarts</button>
+				<button type='button' class='butons' OnClick='Omple_Diumenge()'>Diumenge</button>
 			</th>
 			<th>
-				<button type='button' class='butons' OnClick='Omple_Observacio_Divendres()'>Divendres</button>
+				<button type='button' class='butons' OnClick='Omple_Gralles()'>Gralles</button>
 			</th>
 		</tr>
 	</table>
@@ -257,18 +257,18 @@ function BlockMusic()
 </div> 
 </form>
 <script>
-function Omple_Observacio_Dimarts()
+function Omple_Diumenge()
 {
-	str = "ESCOLA 19:00h - 20:00h";
-	str = str + "\nCANALLA 19:00h - 20.30h";
-	str = str + "\nGENERAL 20:00h - 21:30h";
+	str = "ESCOLA 15:00h - 16:00h";
+	str = str + "\nGENERAL 16:00h - 18:00h";
+	str = str + "\nLloc d'assaig: ";
 	document.getElementById("observacions").innerHTML = str;
 }
-function Omple_Observacio_Divendres()
+function Omple_Gralles()
 {
-	str = "ESCOLA 19:30h - 20:30h";
-	str = str + "\nCANALLA 19:30h - 21.00h";
-	str = str + "\nGENERAL 20:30h - 22:30h";
+	str = "Taller de Gralles";
+	str = str + "\nHorari 10:00h - 13:00h";
+	str = str + "\nLloc d'assaig: ";
 	document.getElementById("observacions").innerHTML = str;
 }
 </script>
